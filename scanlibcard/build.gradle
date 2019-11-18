@@ -14,16 +14,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
@@ -33,6 +30,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.getbouncer:base:1.0.5109'
     implementation 'com.getbouncer:cardscan:1.0.5109'
+    implementation  'com.fxn769:pix:1.4.4'
 }
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
@@ -42,16 +40,14 @@ ext {
     bintrayName = 'CardScanBase'
 
     publishedGroupId = 'com.example.scanlibcard'
-    libraryName = 'scan'
-    artifact = 'scan'
+    libraryName = 'scanlibcard'
+    artifact = 'scanlibcard'
 
     libraryDescription = 'This library provides an Activity that you can use to scan credit and debit cards.'
 
-    siteUrl = 'https://github.com/getbouncer/cardscan-android'
-    gitUrl = 'https://github.com/getbouncer/cardscan-android.git'
-
-    libraryVersion = '1.0.5001'
-
+    siteUrl = 'https://github.com/charanveer13/ScanLib'
+    gitUrl = 'https://github.com/charanveer13/ScanLib.git'
+    libraryVersion = '1.0.5004'
     developerId = 'shahzebg'
     developerName = 'shahzeb khan'
     developerEmail = 'shahzeb.smartitventures@gmail.com'
@@ -60,8 +56,6 @@ ext {
     licenseUrl = 'http://opensource.org/licenses/BSD-3-Clause'
     allLicenses = ["BSD 3-Clause"]
 }
-
-
 group = publishedGroupId
 version = libraryVersion
 
